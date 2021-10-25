@@ -30,12 +30,13 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
-    packagesToPack: '**\LiteNetLib.csproj'
-    configuration: 'Release\netstandard2.0'
+    packagesToPack: 'LiteNetLib\LiteNetLib.csproj'
+    configuration: 'Release'
     versioningScheme: 'byPrereleaseNumber'
     majorVersion: '0'
     minorVersion: '9'
     patchVersion: '5'
+    basePath: '.\'
 
 
 - task: NuGetCommand@2
